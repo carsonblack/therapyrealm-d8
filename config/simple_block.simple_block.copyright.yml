@@ -1,0 +1,11 @@
+uuid: 492de946-3c46-469d-bc72-8e000a67fdda
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: copyright
+title: Copyright
+content:
+  value: "<div class=\"container\">\r\n<div class=\"row\">\r\n<div class=\"col-md-8 text-center text-md-left g-mb-15 g-mb-0--md\">\r\n<div class=\"d-lg-flex\"><small class=\"d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md\">2018 © All Rights Reserved.</small>\r\n<ul class=\"u-list-inline\">\r\n\t<li class=\"list-inline-item\"><a href=\"#!\">Privacy Policy</a></li>\r\n\t<li class=\"list-inline-item\"><span>|</span></li>\r\n\t<li class=\"list-inline-item\"><a href=\"#!\">Terms of Use</a></li>\r\n</ul>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col-md-4 align-self-center\">\r\n<ul class=\"list-inline text-center text-md-right mb-0\">\r\n\t<li class=\"list-inline-item g-mx-10\" data-placement=\"top\" data-toggle=\"tooltip\" title=\"Facebook\">&nbsp;</li>\r\n\t<li class=\"list-inline-item g-mx-10\" data-placement=\"top\" data-toggle=\"tooltip\" title=\"Skype\">&nbsp;</li>\r\n\t<li class=\"list-inline-item g-mx-10\" data-placement=\"top\" data-toggle=\"tooltip\" title=\"Linkedin\">&nbsp;</li>\r\n\t<li class=\"list-inline-item g-mx-10\" data-placement=\"top\" data-toggle=\"tooltip\" title=\"Pinterest\">&nbsp;</li>\r\n\t<li class=\"list-inline-item g-mx-10\" data-placement=\"top\" data-toggle=\"tooltip\" title=\"Twitter\">&nbsp;</li>\r\n\t<li class=\"list-inline-item g-mx-10\" data-placement=\"top\" data-toggle=\"tooltip\" title=\"Dribbble\">&nbsp;</li>\r\n</ul>\r\n</div>\r\n</div>\r\n</div>\r\n"
+  format: full_html

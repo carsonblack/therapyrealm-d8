@@ -1,0 +1,20 @@
+uuid: 4716d80e-674f-4553-8a35-c6117e55c69f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - realm
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: realm_page_title
+theme: realm
+region: sub_header
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

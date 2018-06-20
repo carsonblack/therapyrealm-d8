@@ -1,0 +1,14 @@
+name: Realm
+type: theme
+description: 'Custom theme for Therapy Realm based on the Unify Wrap Bootstrap theme.'
+core: 8.x
+libraries:
+  - realm/realm
+regions:
+  header: Header
+  sub_header: Sub Header
+  top: Top
+  content: Content
+  bottom: Bottom
+  footer: Footer
+  copyright_footer: 'Copyright Footer'

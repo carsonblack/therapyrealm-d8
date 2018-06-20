@@ -1,0 +1,20 @@
+uuid: 59678f45-7ec8-4628-a39f-a70a45b9a6de
+langcode: en
+status: true
+dependencies:
+  theme:
+    - realm
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: realm_local_actions
+theme: realm
+region: content
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

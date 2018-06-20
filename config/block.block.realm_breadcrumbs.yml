@@ -1,0 +1,22 @@
+uuid: d88864c5-2eb2-481f-b49a-7919ac861709
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - realm
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: realm_breadcrumbs
+theme: realm
+region: sub_header
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
