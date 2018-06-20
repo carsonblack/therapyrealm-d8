@@ -1,0 +1,19 @@
+uuid: c915d0e9-cb4f-459b-844f-82e801b7cbd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_qualifications
+    - profile.type.provider
+id: profile.provider.field_qualifications
+field_name: field_qualifications
+entity_type: profile
+bundle: provider
+label: Qualifications
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

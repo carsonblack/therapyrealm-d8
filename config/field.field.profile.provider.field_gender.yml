@@ -1,0 +1,29 @@
+uuid: 09fae215-0018-4a0e-8346-3e95871ecb10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_gender
+    - profile.type.provider
+    - taxonomy.vocabulary.provider_gender
+id: profile.provider.field_gender
+field_name: field_gender
+entity_type: profile
+bundle: provider
+label: Gender
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provider_gender: provider_gender
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

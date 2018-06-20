@@ -1,0 +1,19 @@
+uuid: 9158d2c7-c209-4f74-8f9c-0f7538e56f3d
+langcode: en
+status: true
+dependencies:
+  module:
+    - geolocation
+    - profile
+id: profile.field_office_geo
+field_name: field_office_geo
+entity_type: profile
+type: geolocation
+settings: {  }
+module: geolocation
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

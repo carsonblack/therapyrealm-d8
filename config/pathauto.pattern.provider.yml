@@ -1,0 +1,23 @@
+uuid: 9f38eeaa-2fd6-4c69-83ef-bddbc0da5d28
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - profile
+id: provider
+label: Provider
+type: 'canonical_entities:profile'
+pattern: 'provider/[profile:field_full_name]'
+selection_criteria:
+  6e7377c2-b6dd-4f2f-b694-ebbe2c1362e4:
+    id: 'entity_bundle:profile'
+    bundles:
+      provider: provider
+    negate: false
+    context_mapping:
+      profile: profile
+    uuid: 6e7377c2-b6dd-4f2f-b694-ebbe2c1362e4
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,191 @@
+uuid: 43aad382-62d9-401a-b557-68f34c2bc450
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_social_media_links
+    - profile.type.provider
+  module:
+    - social_media_links_field
+id: profile.provider.field_social_media_links
+field_name: field_social_media_links
+entity_type: profile
+bundle: provider
+label: 'Social Media Links'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    platform: null
+    value: null
+    platform_values:
+      behance:
+        value: ''
+      pinterest:
+        value: ''
+      youtube:
+        value: ''
+      vkontakte:
+        value: ''
+      vimeo:
+        value: ''
+      twitter:
+        value: ''
+      tumblr:
+        value: ''
+      slideshare:
+        value: ''
+      rss:
+        value: ''
+      linkedin:
+        value: ''
+      bitbucket:
+        value: ''
+      instagram:
+        value: ''
+      googleplus:
+        value: ''
+      github:
+        value: ''
+      flickr:
+        value: ''
+      facebook:
+        value: ''
+      email:
+        value: ''
+      drupal:
+        value: ''
+      contact:
+        value: ''
+      youtube_channel:
+        value: ''
+  -
+    platform: null
+    value: null
+    platform_values:
+      behance:
+        value: ''
+      pinterest:
+        value: ''
+      youtube:
+        value: ''
+      vkontakte:
+        value: ''
+      vimeo:
+        value: ''
+      twitter:
+        value: ''
+      tumblr:
+        value: ''
+      slideshare:
+        value: ''
+      rss:
+        value: ''
+      linkedin:
+        value: ''
+      bitbucket:
+        value: ''
+      instagram:
+        value: ''
+      googleplus:
+        value: ''
+      github:
+        value: ''
+      flickr:
+        value: ''
+      facebook:
+        value: ''
+      email:
+        value: ''
+      drupal:
+        value: ''
+      contact:
+        value: ''
+      youtube_channel:
+        value: ''
+default_value_callback: ''
+settings:
+  iconset: 'fontawesome:2x'
+  platforms:
+    behance:
+      description: ''
+      weight: '-10'
+      enabled: 0
+    bitbucket:
+      description: ''
+      weight: '-9'
+      enabled: 0
+    contact:
+      description: ''
+      weight: '-8'
+      enabled: 0
+    drupal:
+      description: ''
+      weight: '-7'
+      enabled: 0
+    email:
+      description: ''
+      weight: '-6'
+      enabled: 0
+    facebook:
+      enabled: '1'
+      description: ''
+      weight: '-5'
+    flickr:
+      description: ''
+      weight: '-4'
+      enabled: 0
+    github:
+      description: ''
+      weight: '-3'
+      enabled: 0
+    googleplus:
+      enabled: '1'
+      description: ''
+      weight: '-2'
+    instagram:
+      enabled: '1'
+      description: ''
+      weight: '-1'
+    linkedin:
+      enabled: '1'
+      description: ''
+      weight: '0'
+    pinterest:
+      description: ''
+      weight: '1'
+      enabled: 0
+    rss:
+      description: ''
+      weight: '2'
+      enabled: 0
+    slideshare:
+      description: ''
+      weight: '3'
+      enabled: 0
+    tumblr:
+      description: ''
+      weight: '4'
+      enabled: 0
+    twitter:
+      enabled: '1'
+      description: ''
+      weight: '5'
+    vimeo:
+      description: ''
+      weight: '6'
+      enabled: 0
+    vkontakte:
+      description: ''
+      weight: '7'
+      enabled: 0
+    youtube:
+      enabled: '1'
+      description: ''
+      weight: '8'
+    youtube_channel:
+      enabled: '1'
+      description: ''
+      weight: '9'
+field_type: social_media_links_field

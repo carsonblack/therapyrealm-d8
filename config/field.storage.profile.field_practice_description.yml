@@ -1,0 +1,19 @@
+uuid: 96576700-621c-4b2c-aa30-dfb9e86a060e
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_practice_description
+field_name: field_practice_description
+entity_type: profile
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

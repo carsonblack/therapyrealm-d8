@@ -1,0 +1,14 @@
+uuid: 5975b704-0db3-4247-8aff-96ca55862f9e
+langcode: en
+status: true
+dependencies: {  }
+id: provider
+label: Provider
+registration: false
+multiple: false
+roles:
+  authenticated: authenticated
+  administrator: '0'
+weight: 0
+use_revisions: false
+description: ''
