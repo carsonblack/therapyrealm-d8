@@ -1,0 +1,19 @@
+uuid: 55824c3d-b23b-4617-a9e2-e0305bb7e243
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_practice_description
+    - profile.type.provider
+id: profile.provider.field_practice_description
+field_name: field_practice_description
+entity_type: profile
+bundle: provider
+label: 'Practice Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

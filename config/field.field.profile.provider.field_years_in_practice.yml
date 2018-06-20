@@ -1,0 +1,23 @@
+uuid: a59e12e2-ff42-428a-a009-9474721d3659
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_years_in_practice
+    - profile.type.provider
+id: profile.provider.field_years_in_practice
+field_name: field_years_in_practice
+entity_type: profile
+bundle: provider
+label: 'Years in Practice'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: years
+field_type: integer

@@ -1,0 +1,9 @@
+uuid: d0b9b216-c50f-4e27-9784-37e972f13152
+langcode: en
+status: true
+dependencies: {  }
+name: 'Service Types'
+vid: service_types
+description: ''
+hierarchy: 0
+weight: 0

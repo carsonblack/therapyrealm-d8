@@ -1,0 +1,23 @@
+uuid: cf8c8dd1-7971-4f1a-af16-323265f33911
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - profile
+id: profile.field_documents
+field_name: field_documents
+entity_type: profile
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

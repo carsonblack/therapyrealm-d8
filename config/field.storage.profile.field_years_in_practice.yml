@@ -1,0 +1,20 @@
+uuid: c347682d-2ddd-4204-b192-5f183a5b8cf2
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_years_in_practice
+field_name: field_years_in_practice
+entity_type: profile
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

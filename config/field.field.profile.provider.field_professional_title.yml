@@ -1,0 +1,19 @@
+uuid: c9ff578f-e3fc-48e8-b918-2e73f19b95cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_professional_title
+    - profile.type.provider
+id: profile.provider.field_professional_title
+field_name: field_professional_title
+entity_type: profile
+bundle: provider
+label: 'Professional Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

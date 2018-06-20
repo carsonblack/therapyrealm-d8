@@ -1,0 +1,21 @@
+uuid: 92a329fa-d214-4b2b-8e23-f94e473d4847
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_fax
+    - profile.type.provider
+  module:
+    - telephone
+id: profile.provider.field_fax
+field_name: field_fax
+entity_type: profile
+bundle: provider
+label: Fax
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

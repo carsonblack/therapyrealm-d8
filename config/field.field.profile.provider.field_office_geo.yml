@@ -1,0 +1,38 @@
+uuid: 2d6cde5c-a485-4f9a-a4cf-1a09ea8d5b07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_office_geo
+    - profile.type.provider
+  module:
+    - geocoder_field
+    - geolocation
+third_party_settings:
+  geocoder_field:
+    method: source
+    weight: '0'
+    geocode_field: field_office_addresses
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins:
+      - googlemaps
+    dumper: geolocation
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: profile.provider.field_office_geo
+field_name: field_office_geo
+entity_type: profile
+bundle: provider
+label: 'Office Geo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

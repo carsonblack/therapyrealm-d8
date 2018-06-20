@@ -1,0 +1,23 @@
+uuid: 0a5aec00-d5d9-48f6-ba23-64155e01bae5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_website_link
+    - profile.type.provider
+  module:
+    - link
+id: profile.provider.field_website_link
+field_name: field_website_link
+entity_type: profile
+bundle: provider
+label: 'Website Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link
