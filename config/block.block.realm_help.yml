@@ -1,0 +1,22 @@
+uuid: c0dad743-406f-4a47-ac10-eacc174429b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - realm
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: realm_help
+theme: realm
+region: content
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,19 @@
+realm:
+  version: VERSION
+  css:
+    theme:
+      assets/vendor/bootstrap/bootstrap.min.css: {}
+      assets/css/unify-core.css: {}
+      assets/css/unify-components.css: {}
+      assets/css/unify-globals.css: {}
+      assets/css/custom.css: {}
+  js:
+    assets/vendor/jquery-migrate/jquery-migrate.min.js: {}
+    assets/vendor/popper.min.js: {}
+    assets/vendor/bootstrap/bootstrap.min.js: {}
+    assets/js/hs.core.js: {}
+    assets/js/custom.js: {}
+  dependencies:
+    - core/normalize-css
+    - core/jquery
+    - core/jquery.once

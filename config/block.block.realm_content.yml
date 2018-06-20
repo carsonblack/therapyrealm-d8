@@ -1,0 +1,22 @@
+uuid: 1eef5151-37ac-4241-84b8-43f3e9bbe0fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - realm
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: realm_content
+theme: realm
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
