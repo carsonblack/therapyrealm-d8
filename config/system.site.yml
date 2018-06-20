@@ -1,0 +1,14 @@
+uuid: 4edb649a-0a1f-402f-8093-79049c5b8abc
+name: therapyrealm-d8
+mail: carsonblack@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
