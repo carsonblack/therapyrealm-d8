@@ -1,0 +1,56 @@
+# Basic LAMP stack
+
+version: "2.1"
+
+services:
+  # Web
+  web:
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: web
+    depends_on:
+      - cli
+    environment:
+      - APACHE_FILE_PROXY
+    volumes:
+      - ${PROJECT_ROOT}/.docksal/etc/apache/host.conf:/usr/local/apache2/conf/extra/includes/host.conf:ro
+    labels:
+      - io.docksal.virtual-host=${VIRTUAL_HOST},*.${VIRTUAL_HOST},a26.local,*.a26.local
+
+  # DB
+  db:
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: db
+
+  # CLI
+  cli:
+    image: docksal/cli:2.1-php7.1
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: cli
+    environment:
+      - DOCROOT
+      - XDEBUG_ENABLED=${XDEBUG_ENABLED:-0}
+      - XDEBUG_CONFIG=remote_connect_back=0 remote_host=${DOCKSAL_HOST_IP}  # Point xdebug to the host IP
+      - PANTHEON_SITE
+      - PANTHEON_ENV
+      - VIRTUAL_HOST
+      - MYSQL_PORT
+      - PHP_IDE_CONFIG
+    volumes:
+      - project_root:/var/www:rw,nocopy  # Project root volume
+      - ${PROJECT_ROOT}/.docksal/etc/drush:/etc/drush:ro
+
+  # Browser
+  browser:
+    hostname: browser
+    image: selenium/standalone-chrome-debug
+    volumes:
+      # Project root volume
+      - project_root:/var/www:ro,nocopy
+    ports:
+      - "${VNC_PORT_MAPPING:-5900}"
+    dns:
+      - ${DOCKSAL_DNS1}
+      - ${DOCKSAL_DNS2}

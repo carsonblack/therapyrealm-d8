@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+
+## Initialize stack and site (full reset)
+##
+## Usage: fin init
+
+# Abort if anything fails
+set -e
+
+#-------------------------- Helper functions --------------------------------
+
+# Console colors
+red='\033[0;31m'
+green='\033[0;32m'
+green_bg='\033[42m'
+yellow='\033[1;33m'
+NC='\033[0m'
+
+echo-red () { echo -e "${red}$1${NC}"; }
+echo-green () { echo -e "${green}$1${NC}"; }
+echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
+echo-yellow () { echo -e "${yellow}$1${NC}"; }
+
+#-------------------------- Execution --------------------------------
+
+# Set docksal-local.env
+if [[ ! -f "$PROJECT_ROOT/.docksal/docksal-local.env" ]]; then
+    cp $PROJECT_ROOT/.docksal/example.docksal-local.env $PROJECT_ROOT/.docksal/docksal-local.env
+    echo -e "${yellow}This local environment setup is a Five (5) step process. It will begin after you provide some initial information."
+    echo -e "Please Enter Your Terminus Machine Token:${NC}"
+    read token
+    echo "SECRET_TERMINUS_TOKEN=\"$token\"" >> $PROJECT_ROOT/.docksal/docksal-local.env
+fi
+echo "Set up local Docksal environment file."
+
+# Stack initialization
+echo -e "${green_bg} Step 1 ${NC}${green} Initializing stack...${NC}"
+if [[ $DOCKER_RUNNING == "true" ]]; then
+	fin reset -f
+else
+	fin up
+fi
+echo "Waiting 10s for MySQL to initialize...";
+sleep 10
+
+echo -e "${green_bg} Step 2 ${NC}${green} Get the code and put it in the right place.${NC}"
+#Make composer run faster
+fin exec composer global require hirak/prestissimo
+
+# run composer install
+fin exec composer install
+
+# Set hosts
+echo -e "${green_bg} Step 3 ${NC}${green} Configuring DNS: ${VIRTUAL_HOST} ${NC}"
+fin hosts remove ${VIRTUAL_HOST}
+fin hosts add ${VIRTUAL_HOST}
+
+# Site initialization
+echo -e "${green_bg} Step 4 ${NC}${green} Initializing site...${NC}"
+
+fin init-site
+
+# Sync the data with Pantheon environement
+echo -e "${green_bg} Step 5 ${NC}${green} Syncing Data with Pantheon...${NC}"
+
+fin refresh
+
+echo -e "${green_bg} DONE! ${NC} "
+echo -e "Use command-click on the URLs below to open them in your browser."
+echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
+
+# Get login link
+echo -en "Login to Your Site: ${yellow}"
+cd ${DOCROOT}
+fin drush uli --uri="http://${VIRTUAL_HOST}"
+echo -en "${NC}"

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+#: exec_target = cli
+
+## Run project's PHPUnit tests.
+##
+## Usage: fin phpunit
+##
+
+# Abort if anything fails
+set -e
+
+# Environment variables passed from fin:
+#
+#   $PROJECT_ROOT - (string) absolute path to NEAREST .docksal folder
+#   $VIRTUAL_HOST - (string) ex. projectname.docksal
+#   $DOCROOT - name of the docroot folder
+#   $DOCKER_RUNNING - (string) "true" or "false"
+
+phpunit_xml="${PROJECT_ROOT}/phpunit.xml.dist"
+if [[ ! -f "${phpunit_xml}" ]]; then
+	echo "Could not find ${phpunit_xml}"
+	exit 1
+fi
+
+# Launch PHPUnit tests
+/var/www/vendor/bin/phpunit -c ${phpunit_xml}
