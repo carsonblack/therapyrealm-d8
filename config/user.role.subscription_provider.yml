@@ -1,0 +1,25 @@
+uuid: aa075eb6-aa69-485a-8d57-1d54129c50a5
+langcode: en
+status: true
+dependencies: {  }
+id: subscription_provider
+label: 'Subscription Provider'
+weight: 5
+is_admin: null
+permissions:
+  - 'access user profiles'
+  - 'cancel account'
+  - 'change own username'
+  - 'create article content'
+  - 'create event content'
+  - 'create provider profile'
+  - 'create terms in tags'
+  - 'delete own event content'
+  - 'delete own provider profile'
+  - 'edit own article content'
+  - 'edit own event content'
+  - 'revert article revisions'
+  - 'update own provider profile'
+  - 'view article revisions'
+  - 'view own provider profile'
+  - 'view own unpublished content'
