@@ -1,0 +1,14 @@
+uuid: 9f825e95-07f4-4c07-abca-490617fa8b4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.free_provider
+  module:
+    - user
+id: user_remove_role_action.free_provider
+label: 'Remove the Free Provider role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: free_provider

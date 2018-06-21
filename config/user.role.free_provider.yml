@@ -1,0 +1,20 @@
+uuid: 6bb081f5-61dd-4ce3-8cc0-2f7d0e62c847
+langcode: en
+status: true
+dependencies: {  }
+id: free_provider
+label: 'Free Provider'
+weight: 4
+is_admin: null
+permissions:
+  - 'access user profiles'
+  - 'cancel account'
+  - 'change own username'
+  - 'create event content'
+  - 'create provider profile'
+  - 'create terms in tags'
+  - 'delete own event content'
+  - 'delete own provider profile'
+  - 'edit own event content'
+  - 'update own provider profile'
+  - 'view own provider profile'

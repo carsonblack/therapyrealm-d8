@@ -1,0 +1,14 @@
+uuid: d446f83f-107a-4ca8-8535-fdf662f655d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.free_provider
+  module:
+    - user
+id: user_add_role_action.free_provider
+label: 'Add the Free Provider role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: free_provider

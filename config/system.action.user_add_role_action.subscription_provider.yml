@@ -1,0 +1,14 @@
+uuid: e071060b-6c91-46fd-96cf-105c2ed8093c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.subscription_provider
+  module:
+    - user
+id: user_add_role_action.subscription_provider
+label: 'Add the Subscription Provider role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: subscription_provider

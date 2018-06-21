@@ -1,0 +1,14 @@
+uuid: b3030c97-9b33-41e9-ab73-f2cdd1b5a39c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.subscription_provider
+  module:
+    - user
+id: user_remove_role_action.subscription_provider
+label: 'Remove the Subscription Provider role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: subscription_provider
