@@ -1,0 +1,30 @@
+recurly_subscription_max: '1'
+recurly_default_currency: USD
+recurly_public_key: ewr1-hZAEFZ7xgoKmkftD7hLokG
+recurly_subscription_display: live
+recurly_subscription_upgrade_timeframe: now
+recurly_subscription_downgrade_timeframe: now
+recurly_subscription_cancel_behavior: cancel
+recurly_entity_type: user
+recurly_pages: '1'
+recurly_coupon_page: '1'
+recurly_subdomain: carson-black.recurly.com
+recurly_listener_key: gC2rS4vV
+recurly_push_logging: true
+recurly_private_api_key: fa3d1634095f4b529b196cb7e86e7674
+recurly_date_format: long
+_core:
+  default_config_hash: fX9wfzEOj8js7xoji0XVROO__5zSfGkIji6iY20hEsg
+recurly_token_mapping:
+  email: '[user:mail]'
+  username: '[user:name]'
+  first_name: '[user:field_first_name]'
+  last_name: '[user:field_last_name]'
+  company_name: '[profile:field_organization_name]'
+  address1: '[profile:field_office_addresses:0:address_line1]'
+  address2: '[profile:field_office_addresses:0:address_line2]'
+  city: '[profile:field_office_addresses:0:locality]'
+  state: '[profile:field_office_addresses:0:administrative_area]'
+  zip: '[profile:field_office_addresses:0:postal_code]'
+  country: US
+  phone: ''
