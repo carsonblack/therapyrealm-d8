@@ -31,6 +31,7 @@ module:
   history: 0
   image: 0
   inline_form_errors: 0
+  libraries: 0
   link: 0
   menu_ui: 0
   migrate: 0
@@ -43,6 +44,7 @@ module:
   profile: 0
   quickedit: 0
   rdf: 0
+  recurly: 0
   search: 0
   shortcut: 0
   simple_block: 0
@@ -59,6 +61,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  webform: 0
   menu_link_content: 1
   pathauto: 1
   views: 10
