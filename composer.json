@@ -21,6 +21,7 @@
         "drupal/core": "^8",
         "drupal/geocoder": "^2.0@beta",
         "drupal/geolocation": "^1.11",
+        "drupal/libraries": "^3.0@alpha",
         "drupal/pathauto": "^1.2",
         "drupal/profile": "^1.0@RC",
         "drupal/recurly": "^1.3",

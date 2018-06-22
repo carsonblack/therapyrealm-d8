@@ -1,0 +1,77 @@
+default:
+  autoload:
+    - %paths.base%/features/bootstrap
+  suites:
+    default:
+      paths:
+        features: %paths.base%/features
+        bootstrap: %paths.base%/features/bootstrap
+      filters:
+        tags: "~@chrome"
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\MarkupContext
+        - Drupal\DrupalExtension\Context\DrushContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      selenium2: ~
+      files_path: %paths.base%/files
+    Drupal\DrupalExtension:
+      blackbox: ~
+      subcontexts:
+        paths:
+          - %paths.base%
+      selectors:
+        message_selector: '.alert, .messages'
+        error_message_selector: '.alert--error, .messages--error'
+        success_message_selector: '.alert--success, .messages--status'
+      region_map:
+        # Main content area
+        Content: ".l-content"
+        # Regular Drupal Block regions
+        Header Region: ".region-header"
+        Navigation Region: ".region-navigation"
+        Page Title Region: ".region-page-title"
+        Pre Content Region: ".region-pre-content"
+        Sidebar First Region: ".l-sidebar-first"
+        Sidebar Second Region: ".l-sidebar-second"
+        Footer Region: ".footer"
+        Footer Credits Region: ".region-footer-credits"
+        # Custom areas rendered in the template
+        Header: ".l-header"
+        Navbar: ".l-navbar"
+        Footer: ".l-footer"
+        # Seven Theme
+        Admin Content: ".region-content"
+        Admin Primary Tabs: ".tabs"
+        # Page Elements
+        Admin Page Title: ".page-title"
+        Article Page Title: ".page-title--plain"
+        Breadcrumb: ".breadcrumbs"
+
+# Docker profile.
+# For use inside the CLI container in Docksal.
+docker:
+  extensions:
+    Behat\MinkExtension:
+      # URL of the site when accessed inside Docksal.
+      base_url: http://web
+      show_cmd: '/usr/bin/google-chrome %s'
+      # Configure browser to be used. Browser must be available on wd_host.
+      # Stick with chrome by default. It's 2x faster than firefox or phantomjs (your results may vary).
+      selenium2:
+        browser: chrome
+        wd_host: http://browser:4444/wd/hub
+        capabilities: {"browser": "chrome", "browserName": "chrome", "browserVersion": "ANY", "version": "ANY", 'chrome': {'switches':['--no-sandbox']}, "marionette": true}
+    Drupal\DrupalExtension:
+      api_driver: 'drupal'
+      drupal:
+        # Site docroot inside Docksal.
+        drupal_root: /var/www/web
+      drush:
+        # Site docroot inside Docksal.
+        root: /var/www/web
