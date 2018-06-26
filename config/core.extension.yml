@@ -44,14 +44,13 @@ module:
   profile: 0
   quickedit: 0
   rdf: 0
-  recurly: 0
-  recurly_hosted: 0
-  recurlyjs: 0
   search: 0
   shortcut: 0
   simple_block: 0
   social_media_links: 0
   social_media_links_field: 0
+  stripe: 0
+  stripe_webform: 0
   system: 0
   taxonomy: 0
   taxonomy_manager: 0
