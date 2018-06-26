@@ -1,1 +1,13 @@
 /* Add here all your css styles (customizations) */
+.navbar-brand {
+  height: 62px;
+}
+
+.offscreen {
+  position: fixed;
+  left: -1000px;
+}
+
+.u-header [aria-labelledby] {
+  opacity: 1;
+}

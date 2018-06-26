@@ -2,6 +2,19 @@
 /*------------------------------------
   Globals
 ------------------------------------*/
+.navbar-brand {
+  height: 62px;
+}
+
+.offscreen {
+  position: fixed;
+  left: -1000px;
+}
+
+.u-header [aria-labelledby] {
+  opacity: 1;
+}
+
 /* Text */
 .g-word-break {
   word-wrap: break-word;

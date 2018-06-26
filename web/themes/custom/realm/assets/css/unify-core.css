@@ -1,3 +1,16 @@
+.navbar-brand {
+  height: 62px;
+}
+
+.offscreen {
+  position: fixed;
+  left: -1000px;
+}
+
+.u-header [aria-labelledby] {
+  opacity: 1;
+}
+
 /*------------------------------------
   Default Styles
 ------------------------------------*/
