@@ -1,0 +1,4 @@
+recurlyjs_address_requirement: full
+recurlyjs_enable_add_ons: '1'
+recurlyjs_enable_coupons: '0'
+recurlyjs_accept_paypal: '0'

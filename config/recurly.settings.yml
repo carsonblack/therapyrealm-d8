@@ -7,7 +7,7 @@ recurly_subscription_downgrade_timeframe: now
 recurly_subscription_cancel_behavior: cancel
 recurly_entity_type: user
 recurly_pages: '1'
-recurly_coupon_page: '1'
+recurly_coupon_page: '0'
 recurly_subdomain: carson-black.recurly.com
 recurly_listener_key: gC2rS4vV
 recurly_push_logging: true
