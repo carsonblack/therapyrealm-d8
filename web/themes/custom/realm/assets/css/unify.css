@@ -12,6 +12,10 @@
   opacity: 1;
 }
 
+#toolbar-administration {
+  padding: 39px 0 0 0;
+}
+
 /*------------------------------------
   Default Styles
 ------------------------------------*/
@@ -113,6 +117,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .u-header [aria-labelledby] {
   opacity: 1;
+}
+
+#toolbar-administration {
+  padding: 39px 0 0 0;
 }
 
 /*------------------------------------
@@ -26610,6 +26618,10 @@ pre[class*="language-"] .toolbar-item a {
   opacity: 1;
 }
 
+#toolbar-administration {
+  padding: 39px 0 0 0;
+}
+
 /*------------------------------------
   Globals
 ------------------------------------*/
@@ -26624,6 +26636,10 @@ pre[class*="language-"] .toolbar-item a {
 
 .u-header [aria-labelledby] {
   opacity: 1;
+}
+
+#toolbar-administration {
+  padding: 39px 0 0 0;
 }
 
 /* Text */

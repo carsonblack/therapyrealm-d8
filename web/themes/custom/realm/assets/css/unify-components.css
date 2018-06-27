@@ -15,6 +15,10 @@
   opacity: 1;
 }
 
+#toolbar-administration {
+  padding: 39px 0 0 0;
+}
+
 /*------------------------------------
   Alerts
 ------------------------------------*/
@@ -26508,4 +26512,8 @@ pre[class*="language-"] .toolbar-item a {
 
 .u-header [aria-labelledby] {
   opacity: 1;
+}
+
+#toolbar-administration {
+  padding: 39px 0 0 0;
 }
