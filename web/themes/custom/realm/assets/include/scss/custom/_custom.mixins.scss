@@ -1,1 +1,26 @@
 // Add here all your customized mixins
+
+@mixin realm_height() {
+  height: $realm-header-height;
+}
+
+.navbar-brand {
+  @include realm_height();
+}
+
+@mixin realm_offscreen() {
+  position: fixed;
+  left: -1000px;
+}
+
+.offscreen {
+  @include realm_offscreen();
+}
+
+.u-header [aria-labelledby] {
+  opacity: 1;
+}
+
+#toolbar-administration{
+  padding: 39px 0 0 0;
+}

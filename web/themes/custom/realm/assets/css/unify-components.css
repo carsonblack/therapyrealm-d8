@@ -2,6 +2,23 @@
 /*------------------------------------
   Components
 ------------------------------------*/
+.navbar-brand {
+  height: 62px;
+}
+
+.offscreen {
+  position: fixed;
+  left: -1000px;
+}
+
+.u-header [aria-labelledby] {
+  opacity: 1;
+}
+
+#toolbar-administration {
+  padding: 39px 0 0 0;
+}
+
 /*------------------------------------
   Alerts
 ------------------------------------*/
@@ -26484,3 +26501,19 @@ pre[class*="language-"] .toolbar-item a {
 }
 
 /* Add here all your css styles (customizations) */
+.navbar-brand {
+  height: 62px;
+}
+
+.offscreen {
+  position: fixed;
+  left: -1000px;
+}
+
+.u-header [aria-labelledby] {
+  opacity: 1;
+}
+
+#toolbar-administration {
+  padding: 39px 0 0 0;
+}

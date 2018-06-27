@@ -1,4 +1,21 @@
 @charset "UTF-8";
+.navbar-brand {
+  height: 62px;
+}
+
+.offscreen {
+  position: fixed;
+  left: -1000px;
+}
+
+.u-header [aria-labelledby] {
+  opacity: 1;
+}
+
+#toolbar-administration {
+  padding: 39px 0 0 0;
+}
+
 /*------------------------------------
   Default Styles
 ------------------------------------*/
@@ -89,6 +106,23 @@ h1, h2, h3, h4, h5, h6 {
 /*------------------------------------
   Components
 ------------------------------------*/
+.navbar-brand {
+  height: 62px;
+}
+
+.offscreen {
+  position: fixed;
+  left: -1000px;
+}
+
+.u-header [aria-labelledby] {
+  opacity: 1;
+}
+
+#toolbar-administration {
+  padding: 39px 0 0 0;
+}
+
 /*------------------------------------
   Alerts
 ------------------------------------*/
@@ -26571,9 +26605,43 @@ pre[class*="language-"] .toolbar-item a {
 }
 
 /* Add here all your css styles (customizations) */
+.navbar-brand {
+  height: 62px;
+}
+
+.offscreen {
+  position: fixed;
+  left: -1000px;
+}
+
+.u-header [aria-labelledby] {
+  opacity: 1;
+}
+
+#toolbar-administration {
+  padding: 39px 0 0 0;
+}
+
 /*------------------------------------
   Globals
 ------------------------------------*/
+.navbar-brand {
+  height: 62px;
+}
+
+.offscreen {
+  position: fixed;
+  left: -1000px;
+}
+
+.u-header [aria-labelledby] {
+  opacity: 1;
+}
+
+#toolbar-administration {
+  padding: 39px 0 0 0;
+}
+
 /* Text */
 .g-word-break {
   word-wrap: break-word;
