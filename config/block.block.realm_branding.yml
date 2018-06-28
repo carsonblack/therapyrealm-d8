@@ -11,7 +11,7 @@ _core:
 id: realm_branding
 theme: realm
 region: header
-weight: -7
+weight: -5
 provider: null
 plugin: system_branding_block
 settings:

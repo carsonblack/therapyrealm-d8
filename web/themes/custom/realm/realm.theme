@@ -21,10 +21,96 @@ function realm_preprocess_breadcrumb(&$variables) {
 /**
  * @param $variables
  *
+ * Implements template_preprocess_block().
+ */
+function realm_preprocess_block(&$variables) {
+  if ($variables["plugin_id"] == 'system_messages_block' ||
+      $variables["plugin_id"] == 'local_tasks_block' ||
+      $variables["plugin_id"] == 'system_main_block'
+  ) {
+    // Add container class for all blocks
+    $variables["attributes"]["class"][] = 'container';
+    // Add a 20px padding to top of all blocks
+    $variables["attributes"]["class"][] = 'g-py-20';
+  }
+
+  if ($variables["plugin_id"] == 'system_messages_block') {
+    if ($variables["content"]["#type"] == "status_messages") {
+      $variables["attributes"]["class"][] =
+        'card card-inverse bg-info text-white rounded-0 card-block g-pa-15';
+    }
+
+  }
+}
+
+/**
+ * @param $variables
+ *
  * Implements template_preprocess_node().
  */
 function realm_preprocess_node(&$variables) {
   if (isset($variables["attributes"]["class"])) {
     $variables["attributes"]["class"][] = 'container g-pt-20';
   }
+}
+
+/**
+ * @param $variables
+ *
+ * Implements template_preprocess_webform().
+ */
+function realm_preprocess_webform (&$variables) {
+  $variables["attributes"]["class"][] = 'g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-30';
+}
+
+/**
+ * @param $variables
+ *
+ * Implements template_preprocess_form_element().
+ */
+function realm_preprocess_form_element (&$variables) {
+  if ($variables["type"] != "password" &&
+    $variables["type"] != "stripe"
+  ) {
+    $variables["attributes"]["class"][] = 'form-group row g-mb-25';
+  }
+
+  if ($variables["type"] == "password") {
+    $variables["attributes"]["class"][] = 'col-sm-9 offset-sm-3';
+  }
+}
+
+/**
+ * @param $variables
+ *
+ * Implements template_preprocess_stripe_element().
+ */
+function realm_preprocess_stripe_element (&$variables) {
+  $variables["classes"] = 'g-mt-30 g-mb-30 form-control-md';
+}
+
+
+/**
+ * @param $variables
+ *
+ * Implements template_preprocess_form_element_label().
+ */
+function realm_preprocess_form_element_label (&$variables) {
+  $variables["attributes"]["class"][] = 'col-sm-3 col-form-label g-mb-10';
+}
+
+/**
+ * @param $variables
+ *
+ * Implements template_preprocess_input().
+ */
+function realm_preprocess_input (&$variables) {
+  if ($variables["element"]["#type"] == "submit") {
+    $variables["attributes"]["class"][] = 'btn btn-md u-btn-primary g-mr-10 g-mb-15';
+  }
+  else {
+    $variables["wrapper_classes"] = 'col-sm-9';
+    $variables["attributes"]["class"][] = 'form-control u-form-control rounded-0';
+  }
+
 }

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/webform_user_create",
+  "type": "drupal-module",
+  "description": "Webform User Create",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/webform_user_create",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/webform_user_create",
+    "source": "http://cgit.drupalcode.org/webform_user_create"
+  },
+  "require": { }
+}
