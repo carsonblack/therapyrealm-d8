@@ -3,12 +3,15 @@ langcode: en
 status: true
 dependencies: {  }
 id: provider
-label: Provider
+label: 'Provider Profile'
 registration: false
 multiple: false
 roles:
-  authenticated: authenticated
+  subscription_provider: subscription_provider
+  authenticated: '0'
   administrator: '0'
+  editor: '0'
+  free_provider: '0'
 weight: 0
 use_revisions: false
 description: ''

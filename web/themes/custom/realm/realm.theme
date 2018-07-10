@@ -33,13 +33,23 @@ function realm_preprocess_block(&$variables) {
     // Add a 20px padding to top of all blocks
     $variables["attributes"]["class"][] = 'g-py-20';
   }
+}
 
-  if ($variables["plugin_id"] == 'system_messages_block') {
-    if ($variables["content"]["#type"] == "status_messages") {
-      $variables["attributes"]["class"][] =
-        'card card-inverse bg-info text-white rounded-0 card-block g-pa-15';
-    }
+/**
+ * Implements template_preprocess_status_messages().
+ */
+function realm_preprocess_status_messages(&$variables) {
+  $variables["attributes"]["class"][] = 'container g-my-20 g-pa-20 alert alert-dismissible fade show  rounded-0';
+  if (isset($variables["message_list"]["status"][0])) {
+    $variables["attributes"]["class"][] = 'g-bg-teal g-color-white';
+  }
 
+  if (isset($variables["message_list"]["warning"][0])) {
+    $variables["attributes"]["class"][] = 'g-bg-yellow';
+  }
+
+  if (isset($variables["message_list"]["error"][0])) {
+    $variables["attributes"]["class"][] = 'g-bg-red g-color-white';
   }
 }
 
@@ -111,6 +121,52 @@ function realm_preprocess_input (&$variables) {
   else {
     $variables["wrapper_classes"] = 'col-sm-9';
     $variables["attributes"]["class"][] = 'form-control u-form-control rounded-0';
+  }
+
+  if ($variables["element"]["#type"] == "checkbox") {
+    $variables["attributes"]["class"][] = 'g-hidden-xs-up g-pos-abs g-top-0 g-left-0';
+  }
+}
+
+/**
+ * Implements template_preprocess_checkboxes().
+ */
+function realm_preprocess_checkboxes (&$variables) {
+  if (isset($variables["element"]["#options"])) {
+    // If there are a lot of checkboxes group them up so they can be put
+    // into columns.
+    $number_of_options = count($variables["element"]["#options"]);
+    if ($number_of_options > 3) {
+      $options_per_column = round(($number_of_options / 3), 0, PHP_ROUND_HALF_UP) + 1;
+      $child_groups = [];
+      $child_group_count = 0;
+      for ($option_count = 1; $option_count <= $number_of_options; $option_count++) {
+        if ($option_count % $options_per_column == 0) {
+          $child_group_count++;
+        }
+        $child_groups[$child_group_count][] = $variables["element"][$option_count];
+      }
+      $variables['child_groups'] = $child_groups;
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_menu_local_tasks().
+ */
+function realm_preprocess_menu_local_tasks (&$variables) {
+  $variables["attributes"]["class"][] = 'nav nav-justified u-nav-v4-1 u-nav-primary';
+}
+
+/**
+ * Implements template_preprocess_menu_local_task().
+ */
+function realm_preprocess_menu_local_task (&$variables) {
+  $variables["attributes"]["class"][] = 'nav-item';
+
+  $variables["link"]["#attributes"]["class"][] = 'nav-link';
+  if (isset($variables["is_active"])) {
+    $variables["link"]["#attributes"]["class"][] = 'active';
   }
 
 }
