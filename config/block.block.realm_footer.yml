@@ -13,7 +13,7 @@ _core:
 id: realm_footer
 theme: realm
 region: footer
-weight: -6
+weight: -5
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

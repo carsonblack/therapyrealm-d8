@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Theme override for a 'checkboxes' #type form element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The rendered checkboxes.
+ *
+ * @see template_preprocess_checkboxes()
+ */
+#}
+<div{{ attributes.addClass('form-checkboxes row g-mb-30') }}>
+    {% if child_groups %}
+        {% for group in child_groups %}
+            <div class="col-md-4">
+            {% for checkbox in group %}
+                {{ checkbox }}
+            {% endfor %}
+            </div>
+        {% endfor %}
+    {% else %}
+        {{ children }}
+    {% endif %}
+
+</div>

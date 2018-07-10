@@ -1,0 +1,7 @@
+name: 'webform_user_create'
+type: module
+description: 'Webform User Create'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - webform

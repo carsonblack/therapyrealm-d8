@@ -1,0 +1,13 @@
+uuid: cea2fe2a-c95f-4767-834e-00f60975b0ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - key.key.realm_encryption_key
+  module:
+    - real_aes
+id: realm_webform_encryption_profile
+label: 'Realm Webform Encryption Profile'
+encryption_method: real_aes
+encryption_key: realm_encryption_key
+encryption_method_configuration: {  }

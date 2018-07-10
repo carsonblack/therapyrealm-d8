@@ -30,6 +30,7 @@ dependencies:
     - geolocation
     - image
     - link
+    - path
     - social_media_links_field
     - telephone
 id: profile.provider.default
@@ -70,12 +71,9 @@ content:
     region: content
   field_languages_spoken:
     weight: 16
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_buttons
     region: content
   field_license_number:
     weight: 4
@@ -183,4 +181,10 @@ content:
     third_party_settings: {  }
     type: number
     region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

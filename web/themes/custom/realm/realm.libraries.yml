@@ -7,6 +7,8 @@ realm:
       assets/css/unify-components.css: {}
       assets/css/unify-globals.css: {}
       assets/css/custom.css: {}
+      assets/vendor/icon-line/css/simple-line-icons.css: {}
+      assets/vendor/icon-awesome/css/font-awesome.min.css: {}
   js:
     assets/vendor/jquery-migrate/jquery-migrate.min.js: {}
     assets/vendor/popper.min.js: {}
