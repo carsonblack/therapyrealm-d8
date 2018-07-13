@@ -6,6 +6,7 @@ libraries:
   - realm/realm
 regions:
   header: Header
+  promo_block: Promo Block
   sub_header: Sub Header
   top: Top
   content: Content

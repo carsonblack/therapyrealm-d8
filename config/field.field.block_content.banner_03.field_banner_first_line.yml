@@ -1,0 +1,19 @@
+uuid: 47abb1a4-61c2-4dc6-b081-b4feca1a6f94
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_03
+    - field.storage.block_content.field_banner_first_line
+id: block_content.banner_03.field_banner_first_line
+field_name: field_banner_first_line
+entity_type: block_content
+bundle: banner_03
+label: 'First Line'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -25,4 +25,10 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_address: true
+  field_cost: true
+  field_date: true
+  field_map_point: true
+  field_topic: true
+  field_type_of_event: true

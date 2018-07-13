@@ -1,0 +1,8 @@
+uuid: 2cddd6d5-5396-422a-a276-d5564b10643e
+langcode: en
+status: true
+dependencies: {  }
+id: banner_06
+label: 'Banner #06'
+revision: 0
+description: 'Block that implements Banner #04 of the Unify theme. See: https://htmlstream.com/public/preview/unify-v2.5.1/unify-main/shortcodes/shortcode-blocks-banners.html'

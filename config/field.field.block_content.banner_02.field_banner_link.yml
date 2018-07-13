@@ -1,0 +1,23 @@
+uuid: 4ee478ec-d22e-4c71-8750-5797ee3c1590
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_02
+    - field.storage.block_content.field_banner_link
+  module:
+    - link
+id: block_content.banner_02.field_banner_link
+field_name: field_banner_link
+entity_type: block_content
+bundle: banner_02
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

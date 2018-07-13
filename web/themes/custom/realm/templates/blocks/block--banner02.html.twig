@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Theme override to display a banner #02 block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+<article class="row align-items-stretch text-center mx-0">
+    <!--Article Content-->
+    <div class="col-sm-6 g-bg-black g-px-30 g-py-45">
+        <h3 class="h4 g-color-white g-font-weight-600 text-uppercase g-mb-25">{{ content.field_banner_first_line }}
+            <span class="d-block g-color-primary g-font-weight-700">{{ content.field_banner_second_line }}</span>
+        </h3>
+        <p class="g-color-gray-dark-v5 g-mb-25">{{ content.field_banner_message }}</p>
+        <a class="btn btn-md u-btn-outline-white g-font-weight-600 g-font-size-11 text-uppercase" href="{{ content.field_banner_link[0]["#url"]|render }}">{{ content.field_banner_link[0]["#title"] }}</a>
+    </div>
+    <!-- End Article Content -->
+
+    <!-- Article Image -->
+    <div class="col-sm-6 px-0 g-bg-size-cover" data-bg-img-src="{{ content.field_banner_image }}"></div>
+    <!-- End Article Image -->
+</article>
