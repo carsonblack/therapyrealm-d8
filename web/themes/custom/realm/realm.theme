@@ -170,3 +170,13 @@ function realm_preprocess_menu_local_task (&$variables) {
   }
 
 }
+
+function realm_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    $pattern = 'block__' . $variables['elements']['content']['#block_content']->bundle();
+
+    // Add the suggestion after normal block suggestions but before single
+    // specific id suggestions
+    array_splice($suggestions, 2, 0, $pattern);
+  }
+}

@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Theme override to display a banner #03 block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+<article class="g-bg-size-cover" data-bg-img-src="{{ content.field_banner_image }}">
+    <div class="w-100 g-min-height-360 g-flex-middle g-width-50x--md g-bg-primary-opacity-0_8 g-pa-25 ml-auto">
+        <div class="g-flex-middle-item">
+            <h4 class="h5 g-color-white g-font-weight-700 text-uppercase g-mb-10">{{ content.field_banner_first_line }}</h4>
+            <p class="g-color-white-opacity-0_9 mb-0">{{ content.field_banner_message }}</p>
+        </div>
+    </div>
+</article>

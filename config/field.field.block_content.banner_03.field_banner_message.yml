@@ -1,0 +1,19 @@
+uuid: ef24074e-b9e1-4dcb-872b-e57b17179bf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_03
+    - field.storage.block_content.field_banner_message
+id: block_content.banner_03.field_banner_message
+field_name: field_banner_message
+entity_type: block_content
+bundle: banner_03
+label: Message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

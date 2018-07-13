@@ -1,0 +1,19 @@
+uuid: aa782768-86b9-470f-8596-67dbfd10d1ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_02
+    - field.storage.block_content.field_banner_second_line
+id: block_content.banner_02.field_banner_second_line
+field_name: field_banner_second_line
+entity_type: block_content
+bundle: banner_02
+label: 'Second Line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,31 @@
+uuid: 294cde9c-5a48-4e98-8143-d63e2b418405
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner01:8353d6d1-4e66-4b54-956c-bb75cb9fa2c0'
+  module:
+    - block_content
+    - system
+  theme:
+    - realm
+id: testbanner01
+theme: realm
+region: promo_block
+weight: 0
+provider: null
+plugin: 'block_content:8353d6d1-4e66-4b54-956c-bb75cb9fa2c0'
+settings:
+  id: 'block_content:8353d6d1-4e66-4b54-956c-bb75cb9fa2c0'
+  label: 'Test Banner 01'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
